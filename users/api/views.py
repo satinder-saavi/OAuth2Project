@@ -1,17 +1,13 @@
 from django.shortcuts import render
 from django.contrib.auth.models import Group
-from rest_framework import authentication
-from rest_framework import exceptions
+from rest_framework import (authentication, exceptions, viewsets, permissions, response, schemas)
 from rest_framework.generics import RetrieveAPIView
 from .serializers import UserSerializer, GroupSerializer, UserProfileSerializer
-from rest_framework import viewsets
-from rest_framework import permissions
 from django.contrib.auth import get_user_model
 from users.models import UserProfile
+from rest_framework.decorators import api_view, action, renderer_classes
 
 
-
-# ViewSets define the view behavior.
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -43,6 +39,7 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 
 class ExampleAuthentication(RetrieveAPIView, authentication.BaseAuthentication):
+    serializer_class = UserSerializer
     def authenticate(self, request):
         username = request.META.get('HTTP_X_USERNAME')
         if not username:
