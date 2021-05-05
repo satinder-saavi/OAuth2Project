@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %} DashBoard {% endblock title %} 
+{% block base_css %}
+{{block.super}}
+{% endblock base_css %}
+{% block breadcrumbbar %}
+<div class="breadcrumbbar bg-transparent ">
+
+</div>
+{% endblock breadcrumbbar %}
+
+
+<!-- End Contentbar -->
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+        
+        <h6 class="mt-4">
+        <a href="/api/">API ENDPOINTS</a>
+        </h6>
+        </div>
+
+    </div>
+</div>
+
+{% endblock content %}
+
+{% block javascript %}
+{% endblock javascript %}
