@@ -9,6 +9,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
     # path('api/',include(('users.api.urls','user-api'),namespace='user-api')),
     path('api/',include('users.api.urls')),
+    path('o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
 
 if settings.DEBUG:
