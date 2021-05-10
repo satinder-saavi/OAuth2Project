@@ -64,7 +64,8 @@
 
 
 
-
+<hr>
+<hr>
 
 
 # Django OAuth Toolkit
@@ -110,8 +111,6 @@ urlpatterns = [
 python manage.py migrate oauth2_provider
 `
 
-<hr>
-<br><br>
 
 ## OAuth2 Authorization Grants
 
@@ -243,7 +242,7 @@ CORS_ALLOWED_ORIGINS = [
 
 
 <hr>
-
+<hr>
 
 
 
